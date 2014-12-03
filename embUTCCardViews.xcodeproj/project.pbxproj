@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20E5468B1A2D0A740073B2CF /* card_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E5468A1A2D0A740073B2CF /* card_mask.png */; };
+		20E5468D1A2D4F5B0073B2CF /* 05_HOTSPOT_A_COATED_STEEL_BELTS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20E5468C1A2D4F5B0073B2CF /* 05_HOTSPOT_A_COATED_STEEL_BELTS.mov */; };
+		20E546901A2D607F0073B2CF /* NSTimer+CVPausable.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E5468F1A2D607F0073B2CF /* NSTimer+CVPausable.m */; };
+		20FD38C11A24E6A700D12C50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD38C01A24E6A700D12C50 /* Foundation.framework */; };
+		20FD38C31A24E6A700D12C50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD38C21A24E6A700D12C50 /* CoreGraphics.framework */; };
+		20FD38C51A24E6A700D12C50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD38C41A24E6A700D12C50 /* UIKit.framework */; };
+		20FD38CB1A24E6A700D12C50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20FD38C91A24E6A700D12C50 /* InfoPlist.strings */; };
+		20FD38CD1A24E6A700D12C50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FD38CC1A24E6A700D12C50 /* main.m */; };
+		20FD38D11A24E6A700D12C50 /* embAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FD38D01A24E6A700D12C50 /* embAppDelegate.m */; };
+		20FD38D41A24E6A700D12C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20FD38D21A24E6A700D12C50 /* Main.storyboard */; };
+		20FD38D71A24E6A800D12C50 /* embViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FD38D61A24E6A800D12C50 /* embViewController.m */; };
+		20FD38D91A24E6A800D12C50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FD38D81A24E6A800D12C50 /* Images.xcassets */; };
+		20FD38E01A24E6A800D12C50 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD38DF1A24E6A800D12C50 /* XCTest.framework */; };
+		20FD38E11A24E6A800D12C50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD38C01A24E6A700D12C50 /* Foundation.framework */; };
+		20FD38E21A24E6A800D12C50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD38C41A24E6A700D12C50 /* UIKit.framework */; };
+		20FD38EA1A24E6A800D12C50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20FD38E81A24E6A800D12C50 /* InfoPlist.strings */; };
+		20FD38EC1A24E6A800D12C50 /* embUTCCardViewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FD38EB1A24E6A800D12C50 /* embUTCCardViewsTests.m */; };
+		20FD38F71A24E6DE00D12C50 /* embUiViewCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FD38F61A24E6DE00D12C50 /* embUiViewCard.m */; };
+		20FD38FA1A2504D100D12C50 /* text_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 20FD38F81A2504D100D12C50 /* text_bg.png */; };
+		20FD38FB1A2504D100D12C50 /* text_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20FD38F91A2504D100D12C50 /* text_bg@2x.png */; };
+		20FD38FD1A25085800D12C50 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20FD38FC1A25085800D12C50 /* bg.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20FD38E31A24E6A800D12C50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20FD38B51A24E6A700D12C50 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20FD38BC1A24E6A700D12C50;
+			remoteInfo = embUTCCardViews;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20E5468A1A2D0A740073B2CF /* card_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_mask.png; sourceTree = SOURCE_ROOT; };
+		20E5468C1A2D4F5B0073B2CF /* 05_HOTSPOT_A_COATED_STEEL_BELTS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 05_HOTSPOT_A_COATED_STEEL_BELTS.mov; sourceTree = SOURCE_ROOT; };
+		20E5468E1A2D607F0073B2CF /* NSTimer+CVPausable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+CVPausable.h"; sourceTree = "<group>"; };
+		20E5468F1A2D607F0073B2CF /* NSTimer+CVPausable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+CVPausable.m"; sourceTree = "<group>"; };
+		20FD38BD1A24E6A700D12C50 /* embUTCCardViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = embUTCCardViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20FD38C01A24E6A700D12C50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		20FD38C21A24E6A700D12C50 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		20FD38C41A24E6A700D12C50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		20FD38C81A24E6A700D12C50 /* embUTCCardViews-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "embUTCCardViews-Info.plist"; sourceTree = "<group>"; };
+		20FD38CA1A24E6A700D12C50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		20FD38CC1A24E6A700D12C50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		20FD38CE1A24E6A700D12C50 /* embUTCCardViews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "embUTCCardViews-Prefix.pch"; sourceTree = "<group>"; };
+		20FD38CF1A24E6A700D12C50 /* embAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = embAppDelegate.h; sourceTree = "<group>"; };
+		20FD38D01A24E6A700D12C50 /* embAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = embAppDelegate.m; sourceTree = "<group>"; };
+		20FD38D31A24E6A700D12C50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20FD38D51A24E6A700D12C50 /* embViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = embViewController.h; sourceTree = "<group>"; };
+		20FD38D61A24E6A800D12C50 /* embViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = embViewController.m; sourceTree = "<group>"; };
+		20FD38D81A24E6A800D12C50 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		20FD38DE1A24E6A800D12C50 /* embUTCCardViewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = embUTCCardViewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20FD38DF1A24E6A800D12C50 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		20FD38E71A24E6A800D12C50 /* embUTCCardViewsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "embUTCCardViewsTests-Info.plist"; sourceTree = "<group>"; };
+		20FD38E91A24E6A800D12C50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		20FD38EB1A24E6A800D12C50 /* embUTCCardViewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = embUTCCardViewsTests.m; sourceTree = "<group>"; };
+		20FD38F51A24E6DE00D12C50 /* embUiViewCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = embUiViewCard.h; path = ../embUiViewCard.h; sourceTree = "<group>"; };
+		20FD38F61A24E6DE00D12C50 /* embUiViewCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = embUiViewCard.m; path = ../embUiViewCard.m; sourceTree = "<group>"; };
+		20FD38F81A2504D100D12C50 /* text_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text_bg.png; sourceTree = SOURCE_ROOT; };
+		20FD38F91A2504D100D12C50 /* text_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text_bg@2x.png"; sourceTree = SOURCE_ROOT; };
+		20FD38FC1A25085800D12C50 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20FD38BA1A24E6A700D12C50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20FD38C31A24E6A700D12C50 /* CoreGraphics.framework in Frameworks */,
+				20FD38C51A24E6A700D12C50 /* UIKit.framework in Frameworks */,
+				20FD38C11A24E6A700D12C50 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20FD38DB1A24E6A800D12C50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20FD38E01A24E6A800D12C50 /* XCTest.framework in Frameworks */,
+				20FD38E21A24E6A800D12C50 /* UIKit.framework in Frameworks */,
+				20FD38E11A24E6A800D12C50 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20FD38B41A24E6A700D12C50 = {
+			isa = PBXGroup;
+			children = (
+				20FD38C61A24E6A700D12C50 /* embUTCCardViews */,
+				20FD38E51A24E6A800D12C50 /* embUTCCardViewsTests */,
+				20FD38BF1A24E6A700D12C50 /* Frameworks */,
+				20FD38BE1A24E6A700D12C50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20FD38BE1A24E6A700D12C50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20FD38BD1A24E6A700D12C50 /* embUTCCardViews.app */,
+				20FD38DE1A24E6A800D12C50 /* embUTCCardViewsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20FD38BF1A24E6A700D12C50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20FD38C01A24E6A700D12C50 /* Foundation.framework */,
+				20FD38C21A24E6A700D12C50 /* CoreGraphics.framework */,
+				20FD38C41A24E6A700D12C50 /* UIKit.framework */,
+				20FD38DF1A24E6A800D12C50 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20FD38C61A24E6A700D12C50 /* embUTCCardViews */ = {
+			isa = PBXGroup;
+			children = (
+				20FD38CF1A24E6A700D12C50 /* embAppDelegate.h */,
+				20FD38D01A24E6A700D12C50 /* embAppDelegate.m */,
+				20FD38D21A24E6A700D12C50 /* Main.storyboard */,
+				20FD38D51A24E6A700D12C50 /* embViewController.h */,
+				20FD38D61A24E6A800D12C50 /* embViewController.m */,
+				20E5468E1A2D607F0073B2CF /* NSTimer+CVPausable.h */,
+				20E5468F1A2D607F0073B2CF /* NSTimer+CVPausable.m */,
+				20FD38F51A24E6DE00D12C50 /* embUiViewCard.h */,
+				20FD38F61A24E6DE00D12C50 /* embUiViewCard.m */,
+				20E5468C1A2D4F5B0073B2CF /* 05_HOTSPOT_A_COATED_STEEL_BELTS.mov */,
+				20E5468A1A2D0A740073B2CF /* card_mask.png */,
+				20FD38F81A2504D100D12C50 /* text_bg.png */,
+				20FD38F91A2504D100D12C50 /* text_bg@2x.png */,
+				20FD38FC1A25085800D12C50 /* bg.jpg */,
+				20FD38D81A24E6A800D12C50 /* Images.xcassets */,
+				20FD38C71A24E6A700D12C50 /* Supporting Files */,
+			);
+			path = embUTCCardViews;
+			sourceTree = "<group>";
+		};
+		20FD38C71A24E6A700D12C50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20FD38C81A24E6A700D12C50 /* embUTCCardViews-Info.plist */,
+				20FD38C91A24E6A700D12C50 /* InfoPlist.strings */,
+				20FD38CC1A24E6A700D12C50 /* main.m */,
+				20FD38CE1A24E6A700D12C50 /* embUTCCardViews-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20FD38E51A24E6A800D12C50 /* embUTCCardViewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				20FD38EB1A24E6A800D12C50 /* embUTCCardViewsTests.m */,
+				20FD38E61A24E6A800D12C50 /* Supporting Files */,
+			);
+			path = embUTCCardViewsTests;
+			sourceTree = "<group>";
+		};
+		20FD38E61A24E6A800D12C50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20FD38E71A24E6A800D12C50 /* embUTCCardViewsTests-Info.plist */,
+				20FD38E81A24E6A800D12C50 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20FD38BC1A24E6A700D12C50 /* embUTCCardViews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20FD38EF1A24E6A800D12C50 /* Build configuration list for PBXNativeTarget "embUTCCardViews" */;
+			buildPhases = (
+				20FD38B91A24E6A700D12C50 /* Sources */,
+				20FD38BA1A24E6A700D12C50 /* Frameworks */,
+				20FD38BB1A24E6A700D12C50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = embUTCCardViews;
+			productName = embUTCCardViews;
+			productReference = 20FD38BD1A24E6A700D12C50 /* embUTCCardViews.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20FD38DD1A24E6A800D12C50 /* embUTCCardViewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20FD38F21A24E6A800D12C50 /* Build configuration list for PBXNativeTarget "embUTCCardViewsTests" */;
+			buildPhases = (
+				20FD38DA1A24E6A800D12C50 /* Sources */,
+				20FD38DB1A24E6A800D12C50 /* Frameworks */,
+				20FD38DC1A24E6A800D12C50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20FD38E41A24E6A800D12C50 /* PBXTargetDependency */,
+			);
+			name = embUTCCardViewsTests;
+			productName = embUTCCardViewsTests;
+			productReference = 20FD38DE1A24E6A800D12C50 /* embUTCCardViewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20FD38B51A24E6A700D12C50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = emb;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = neoscape;
+				TargetAttributes = {
+					20FD38BC1A24E6A700D12C50 = {
+						DevelopmentTeam = 9734648496;
+					};
+					20FD38DD1A24E6A800D12C50 = {
+						TestTargetID = 20FD38BC1A24E6A700D12C50;
+					};
+				};
+			};
+			buildConfigurationList = 20FD38B81A24E6A700D12C50 /* Build configuration list for PBXProject "embUTCCardViews" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20FD38B41A24E6A700D12C50;
+			productRefGroup = 20FD38BE1A24E6A700D12C50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20FD38BC1A24E6A700D12C50 /* embUTCCardViews */,
+				20FD38DD1A24E6A800D12C50 /* embUTCCardViewsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20FD38BB1A24E6A700D12C50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20FD38D91A24E6A800D12C50 /* Images.xcassets in Resources */,
+				20FD38CB1A24E6A700D12C50 /* InfoPlist.strings in Resources */,
+				20FD38D41A24E6A700D12C50 /* Main.storyboard in Resources */,
+				20FD38FA1A2504D100D12C50 /* text_bg.png in Resources */,
+				20E5468D1A2D4F5B0073B2CF /* 05_HOTSPOT_A_COATED_STEEL_BELTS.mov in Resources */,
+				20E5468B1A2D0A740073B2CF /* card_mask.png in Resources */,
+				20FD38FD1A25085800D12C50 /* bg.jpg in Resources */,
+				20FD38FB1A2504D100D12C50 /* text_bg@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20FD38DC1A24E6A800D12C50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20FD38EA1A24E6A800D12C50 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20FD38B91A24E6A700D12C50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20FD38CD1A24E6A700D12C50 /* main.m in Sources */,
+				20FD38F71A24E6DE00D12C50 /* embUiViewCard.m in Sources */,
+				20FD38D71A24E6A800D12C50 /* embViewController.m in Sources */,
+				20FD38D11A24E6A700D12C50 /* embAppDelegate.m in Sources */,
+				20E546901A2D607F0073B2CF /* NSTimer+CVPausable.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20FD38DA1A24E6A800D12C50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20FD38EC1A24E6A800D12C50 /* embUTCCardViewsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20FD38E41A24E6A800D12C50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20FD38BC1A24E6A700D12C50 /* embUTCCardViews */;
+			targetProxy = 20FD38E31A24E6A800D12C50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		20FD38C91A24E6A700D12C50 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20FD38CA1A24E6A700D12C50 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		20FD38D21A24E6A700D12C50 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20FD38D31A24E6A700D12C50 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		20FD38E81A24E6A800D12C50 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20FD38E91A24E6A800D12C50 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20FD38ED1A24E6A800D12C50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Evan Buxton (5TJ6RXCUHG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Evan Buxton (5TJ6RXCUHG)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		20FD38EE1A24E6A800D12C50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20FD38F01A24E6A800D12C50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Evan Buxton (5TJ6RXCUHG)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "embUTCCardViews/embUTCCardViews-Prefix.pch";
+				INFOPLIST_FILE = "embUTCCardViews/embUTCCardViews-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		20FD38F11A24E6A800D12C50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Evan Buxton (5TJ6RXCUHG)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "embUTCCardViews/embUTCCardViews-Prefix.pch";
+				INFOPLIST_FILE = "embUTCCardViews/embUTCCardViews-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		20FD38F31A24E6A800D12C50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/embUTCCardViews.app/embUTCCardViews";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "embUTCCardViews/embUTCCardViews-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "embUTCCardViewsTests/embUTCCardViewsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		20FD38F41A24E6A800D12C50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/embUTCCardViews.app/embUTCCardViews";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "embUTCCardViews/embUTCCardViews-Prefix.pch";
+				INFOPLIST_FILE = "embUTCCardViewsTests/embUTCCardViewsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20FD38B81A24E6A700D12C50 /* Build configuration list for PBXProject "embUTCCardViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20FD38ED1A24E6A800D12C50 /* Debug */,
+				20FD38EE1A24E6A800D12C50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20FD38EF1A24E6A800D12C50 /* Build configuration list for PBXNativeTarget "embUTCCardViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20FD38F01A24E6A800D12C50 /* Debug */,
+				20FD38F11A24E6A800D12C50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20FD38F21A24E6A800D12C50 /* Build configuration list for PBXNativeTarget "embUTCCardViewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20FD38F31A24E6A800D12C50 /* Debug */,
+				20FD38F41A24E6A800D12C50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20FD38B51A24E6A700D12C50 /* Project object */;
+}
