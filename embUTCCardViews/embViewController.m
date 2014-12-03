@@ -24,6 +24,8 @@
 
 @implementation embViewController
 
+
+
 //----------------------------------------------------
 #pragma mark - view hierarchy
 //----------------------------------------------------
@@ -41,32 +43,7 @@
 }
 
 //----------------------------------------------------
-#pragma mark - movie player
-//----------------------------------------------------
--(void)createAVPlayer
-{
-	NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"05_HOTSPOT_A_COATED_STEEL_BELTS" withExtension:@"mov"];
-	AVURLAsset *asset = [AVURLAsset URLAssetWithURL:fileURL options:nil];
-	AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:asset];
-	
-	player = [AVPlayer playerWithPlayerItem:playerItem];
-	AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
-	playerLayer.frame = CGRectMake(0, 0, 1024, 768);
-	playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-	
-	NSString *selectorAfterMovieFinished;
-	selectorAfterMovieFinished = @"playerItemLoop:";
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:NSSelectorFromString(selectorAfterMovieFinished)
-												 name:AVPlayerItemDidPlayToEndTimeNotification
-											   object:[player currentItem]];
-	
-	[self.view.layer insertSublayer:playerLayer atIndex:0];
-}
-
-//----------------------------------------------------
-#pragma mark - init
+#pragma mark - start sequences
 //----------------------------------------------------
 /*
  start all info cards and movie in motion
@@ -77,6 +54,7 @@
 	[self addTimerToPlayer];
 	[self createCards];
 }
+
 //----------------------------------------------------
 #pragma mark - info cards
 //----------------------------------------------------
@@ -138,7 +116,7 @@
 	
 	// update container frame now that we know the heights
 	uiv_HotspotInfoCardContainer.frame = CGRectMake(120, 200, 360, tt);
-
+	
 }
 
 -(void)removeCards
@@ -160,138 +138,8 @@
 	}
 }
 
-
 //----------------------------------------------------
-#pragma mark - movie player
-//----------------------------------------------------
-/*
- movie in the background
- */
--(void)playerItemLoop:(NSNotification *)notification
-{
-	AVPlayerItem *p = [notification object];
-	[p seekToTime:kCMTimeZero];
-	
-		
-	[self beginSequence];
-}
-
-//----------------------------------------------------
-#pragma mark - utilties
-//----------------------------------------------------
-#pragma mark  textview height
-//----------------------------------------------------
-/*
- calculate height of
- */
-- (CGFloat)measureHeightOfUITextView:(UITextView *)textView
-{
-    if ([textView respondsToSelector:@selector(snapshotViewAfterScreenUpdates:)])
-    {
-        // This is the code for iOS 7. contentSize no longer returns the correct value, so
-        // we have to calculate it.
-        //
-        // This is partly borrowed from HPGrowingTextView, but I've replaced the
-        // magic fudge factors with the calculated values (having worked out where
-        // they came from)
-		
-        CGRect frame = textView.bounds;
-		
-        // Take account of the padding added around the text.
-		
-        UIEdgeInsets textContainerInsets = textView.textContainerInset;
-        UIEdgeInsets contentInsets = textView.contentInset;
-		
-        CGFloat leftRightPadding = textContainerInsets.left + textContainerInsets.right + textView.textContainer.lineFragmentPadding * 2 + contentInsets.left + contentInsets.right;
-        CGFloat topBottomPadding = textContainerInsets.top + textContainerInsets.bottom + contentInsets.top + contentInsets.bottom;
-		
-        frame.size.width -= leftRightPadding;
-        frame.size.height -= topBottomPadding;
-		
-        NSString *textToMeasure = textView.text;
-        if ([textToMeasure hasSuffix:@"\n"])
-        {
-            textToMeasure = [NSString stringWithFormat:@"%@-", textView.text];
-        }
-		
-        // NSString class method: boundingRectWithSize:options:attributes:context is
-        // available only on ios7.0 sdk.
-		
-        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-        [paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
-		
-        NSDictionary *attributes = @{ NSFontAttributeName: [UIFont systemFontOfSize:18.5], NSParagraphStyleAttributeName : paragraphStyle };
-		
-        CGRect size = [textToMeasure boundingRectWithSize:CGSizeMake(360, MAXFLOAT)
-                                                  options:NSStringDrawingUsesLineFragmentOrigin
-                                               attributes:attributes
-                                                  context:nil];
-		
-		NSLog(@"fontSize = \tbounds = (%f x %f)",
-			  size.size.width,
-			  size.size.height);
-		
-        CGFloat measuredHeight = ceilf(CGRectGetHeight(size) + topBottomPadding);
-		
-		NSLog(@"measuredHeight %f)",
-			  measuredHeight);
-		
-        return measuredHeight;
-    }
-    else
-    {
-        return textView.contentSize.height;
-    }
-}
-
-//----------------------------------------------------
-#pragma mark - timer
-//----------------------------------------------------
-/*
- keeps track of number seconds elapsed 
- to help sync which card to reveal next
- */
-
--(void)addTimerToPlayer
-{
-	if (_myTimer) {
-		[self.myTimer invalidate];
-        self.myTimer = nil;
-	}
-	
-	self.myTimer = [NSTimer scheduledTimerWithTimeInterval:1
-                                                    target:self
-                                                  selector:@selector(displayMyCurrentTime:)
-                                                  userInfo:nil
-                                                   repeats:YES];
-
-	NSLog(@"start timer");
-}
-//----------------------------------------------------
-#pragma mark  utility seconds
-//----------------------------------------------------
-/*
- as each second passes check if the seconds
- match the reveal delay
-*/
-- (void)displayMyCurrentTime:(NSTimer *)timer
-{
-	CGFloat movieLength = CMTimeGetSeconds([player currentTime]);
-	
-	int y = movieLength;
-	NSLog(@"seconds %i",y);
-	
-//TODO: pass the time to remove from the model
-	if (y == 13) {
-		[self removeCards];
-	}
-	
-	// check if the seconds match the reveal delay
-	[self indexOfCardToReveal:y];
-}
-
-//----------------------------------------------------
-#pragma mark - find card that should appear
+#pragma mark find card that should appear
 //----------------------------------------------------
 
 // find card and remove
@@ -393,7 +241,7 @@
 }
 
 //----------------------------------------------------
-#pragma mark - pause card animations
+#pragma mark pause card animations
 //----------------------------------------------------
 /*
  actions for pausing and resuming animations
@@ -443,6 +291,157 @@
     CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
     layer.beginTime = timeSincePause;
 }
+
+//----------------------------------------------------
+#pragma mark - movie player
+//----------------------------------------------------
+-(void)createAVPlayer
+{
+	NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"05_HOTSPOT_A_COATED_STEEL_BELTS" withExtension:@"mov"];
+	AVURLAsset *asset = [AVURLAsset URLAssetWithURL:fileURL options:nil];
+	AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:asset];
+	
+	player = [AVPlayer playerWithPlayerItem:playerItem];
+	AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
+	playerLayer.frame = CGRectMake(0, 0, 1024, 768);
+	playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+	
+	NSString *selectorAfterMovieFinished;
+	selectorAfterMovieFinished = @"playerItemLoop:";
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:NSSelectorFromString(selectorAfterMovieFinished)
+												 name:AVPlayerItemDidPlayToEndTimeNotification
+											   object:[player currentItem]];
+	
+	[self.view.layer insertSublayer:playerLayer atIndex:0];
+}
+
+//----------------------------------------------------
+#pragma mark movie loop
+//----------------------------------------------------
+/*
+ movie in the background
+ */
+-(void)playerItemLoop:(NSNotification *)notification
+{
+	AVPlayerItem *p = [notification object];
+	[p seekToTime:kCMTimeZero];
+	
+	
+	[self beginSequence];
+}
+
+//----------------------------------------------------
+#pragma mark - timer
+//----------------------------------------------------
+/*
+ keeps track of number seconds elapsed
+ to help sync which card to reveal next
+ */
+
+-(void)addTimerToPlayer
+{
+	if (_myTimer) {
+		[self.myTimer invalidate];
+        self.myTimer = nil;
+	}
+	
+	self.myTimer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                    target:self
+                                                  selector:@selector(displayMyCurrentTime:)
+                                                  userInfo:nil
+                                                   repeats:YES];
+	
+	NSLog(@"start timer");
+}
+
+
+//----------------------------------------------------
+#pragma mark - utilties
+//----------------------------------------------------
+/*
+ calculate height of
+ */
+- (CGFloat)measureHeightOfUITextView:(UITextView *)textView
+{
+    if ([textView respondsToSelector:@selector(snapshotViewAfterScreenUpdates:)])
+    {
+        // This is the code for iOS 7. contentSize no longer returns the correct value, so
+        // we have to calculate it.
+        //
+        // This is partly borrowed from HPGrowingTextView, but I've replaced the
+        // magic fudge factors with the calculated values (having worked out where
+        // they came from)
+		
+        CGRect frame = textView.bounds;
+		
+        // Take account of the padding added around the text.
+		
+        UIEdgeInsets textContainerInsets = textView.textContainerInset;
+        UIEdgeInsets contentInsets = textView.contentInset;
+		
+        CGFloat leftRightPadding = textContainerInsets.left + textContainerInsets.right + textView.textContainer.lineFragmentPadding * 2 + contentInsets.left + contentInsets.right;
+        CGFloat topBottomPadding = textContainerInsets.top + textContainerInsets.bottom + contentInsets.top + contentInsets.bottom;
+		
+        frame.size.width -= leftRightPadding;
+        frame.size.height -= topBottomPadding;
+		
+        NSString *textToMeasure = textView.text;
+        if ([textToMeasure hasSuffix:@"\n"])
+        {
+            textToMeasure = [NSString stringWithFormat:@"%@-", textView.text];
+        }
+		
+        // NSString class method: boundingRectWithSize:options:attributes:context is
+        // available only on ios7.0 sdk.
+		
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        [paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
+		
+        NSDictionary *attributes = @{ NSFontAttributeName: [UIFont systemFontOfSize:18.5], NSParagraphStyleAttributeName : paragraphStyle };
+		
+        CGRect size = [textToMeasure boundingRectWithSize:CGSizeMake(360, MAXFLOAT)
+                                                  options:NSStringDrawingUsesLineFragmentOrigin
+                                               attributes:attributes
+                                                  context:nil];
+		
+		NSLog(@"fontSize = \tbounds = (%f x %f)",
+			  size.size.width,
+			  size.size.height);
+		
+        CGFloat measuredHeight = ceilf(CGRectGetHeight(size) + topBottomPadding);
+		
+		NSLog(@"measuredHeight %f)",
+			  measuredHeight);
+		
+        return measuredHeight;
+    }
+    else
+    {
+        return textView.contentSize.height;
+    }
+}
+
+/*
+ as each second passes check if the seconds
+ match the reveal delay
+ */
+- (void)displayMyCurrentTime:(NSTimer *)timer
+{
+	CGFloat movieLength = CMTimeGetSeconds([player currentTime]);
+	
+	int y = movieLength;
+	NSLog(@"seconds %i",y);
+	
+	if (y == 13) {
+		[self removeCards];
+	}
+	
+	// check if the seconds match the reveal delay
+	[self indexOfCardToReveal:y];
+}
+
 
 //----------------------------------------------------
 #pragma mark - boilerplate
